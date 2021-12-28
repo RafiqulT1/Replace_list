@@ -1,3 +1,4 @@
+
 def display_list(value_list):
     print("Here is current list: ", value_list)
 
@@ -21,7 +22,8 @@ def replacement(value_list, index):
 def doplay():
     y_n = "wrong"
     while y_n not in ["Y", "N"]:
-        y_n = input("Do you want to keep replacing words? (Y/y or N/n")
+        y_n = input("Do you want to keep replacing words? (Y/y or N/n): ")
+        y_n = y_n.capitalize()
 
         if y_n not in ["Y", "N"]:
             print("Please choose (Y/y or N/n)")
