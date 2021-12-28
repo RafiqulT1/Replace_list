@@ -9,7 +9,10 @@ def check_input():
         except ValueError:
             print("Sorry worng value! :(")
         else:
-            return index
+            if index >= 1 and index <= 5:
+                return index
+            else:
+                print("Value out of range")
 
 
 display_list()
