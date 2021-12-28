@@ -5,7 +5,7 @@ value_list = [1, 2, 3, 4, 5]
 def check_input():
     while True:
         try:
-            index = int(input("Type number between 1-5 to select position for replacement: "))
+            index = int(input("Type number between 1-5 to select index for replacement: "))
         except ValueError:
             print("Sorry worng value! :(")
         else:
@@ -14,8 +14,15 @@ def check_input():
             else:
                 print("Value out of range")
 
+def replacement(value_list, index):
+    value = input("Type a word to replace index: ")
+    value_list[index - 1] = value
+    return value_list
 
 display_list()
-print(check_input())
+position = check_input()
+value_list = replacement(value_list,position)
+print("Current list: ", value_list)
+
 
 #testing
