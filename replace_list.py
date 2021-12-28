@@ -24,7 +24,7 @@ def doplay():
         y_n = input("Do you want to keep replacing words? (Y/y or N/n")
 
         if y_n not in ["Y", "N"]:
-            print("Sorry, please choose (Y/y or N/n)")
+            print("Please choose (Y/y or N/n)")
 
     if y_n == "Y":
         return True
@@ -33,11 +33,14 @@ def doplay():
         return False
 
 value_list = [1, 2, 3, 4, 5]
+go_on = True
 
-display_list()
-position = check_input()
-value_list = replacement(value_list,position)
-print("Current list: ", value_list)
+while go_on:
+    display_list(value_list)
+    position = check_input()
+    value_list = replacement(value_list,position)
+    print("Current list: ", value_list)
+    go_on = doplay()
 
 
 #testing
